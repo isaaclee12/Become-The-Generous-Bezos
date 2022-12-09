@@ -1,34 +1,52 @@
 {
-    "Rent & Utilities": {
+    "needs": [
+        {
         "cost": 21409,
-        "image": "rent.png"
-    },
-    "Food": {
-        "cost": 7316,
-        "image": "food.png"
-    },
-    "Transportation": {
-        "cost": 9826,
-        "image": "transportation.png"
-    },
-    "Healthcare": {
-        "cost": 5177,
-        "image": "healthcare.png"
-    },
-    "Entertainment": {
-        "cost": 2912,,
-        "image": "entertainment.png"
-    },
-    "Personal Care": {
-        "cost": 646,
-        "image": "personal_care.png"
-    },
-    "Education": {
-        "cost": 1271,
-        "image": "education.png"
-    },
-    "Apparel & Services": {
-        "cost": 1434,
-        "image": "aparrel.png"
-    },
+        "image": "rent.png",
+        "item": "rent",
+        "setItem": "setRent"
+        },
+        {
+            "cost": 7316,
+            "image": "food.png",
+            "item": "food",
+            "setItem": "setFood"
+        },
+        {
+            "cost": 9826,
+            "image": "transportation.png",
+            "item": "transportation",
+            "setItem": "setTransportation"
+        },
+        {
+            "cost": 5177,
+            "image": "healthcare.png",
+            "item": "healthcare",
+            "setItem": "setHealthcare"
+        },
+        {
+            "cost": 2912,,
+            "image": "entertainment.png",
+            "item": "entertainment",
+            "setItem": "setEntertainment"
+        },
+        {
+            "cost": 646,
+            "image": "personal_care.png",
+            "item": "personalCare",
+            "setItem": "setPersonalCare"
+        },
+        {
+            "cost": 1271,
+            "image": "education.png",
+            "item": "education",
+            "setItem": "setEducation"
+        },
+        {
+            "cost": 1434,
+            "image": "aparrel.png",
+            "item": "aparrel",
+            "setItem": "setAparrel"
+        }
+    ]
 }
