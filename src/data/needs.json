@@ -25,7 +25,7 @@
             "setItem": "setHealthcare"
         },
         {
-            "cost": 2912,,
+            "cost": 2912,
             "image": "entertainment.png",
             "item": "entertainment",
             "setItem": "setEntertainment"

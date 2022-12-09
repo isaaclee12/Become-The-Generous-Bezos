@@ -1,0 +1,9 @@
+
+const [rent, setRent] = useState(0)
+const [food, setFood] = useState(0)
+const [transportation, setTransportation] = useState(0)
+const [healthcare, setHealthcare] = useState(0)
+const [entertainment, setEntertainment] = useState(0)
+const [personalCare, setPersonalCare] = useState(0)
+const [education, setEducation] = useState(0)
+const [aparrel, setAparrel] = useState(0)

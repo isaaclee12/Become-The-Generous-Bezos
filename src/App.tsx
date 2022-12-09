@@ -9,6 +9,12 @@ import needsJson from './data/needs.json'
 import './App.css';
 
 function App() {
+
+  /*
+  
+  ISAAC NOTE TO SELF: READ TODO'S IN README.old.md FIRST!!!!!
+  
+   */
   const [wealth, setWealth] = useState(202000000000); // 202 BILLION USD
   const [rent, setRent] = useState(0);
   const [food, setFood] = useState(0);
@@ -27,6 +33,8 @@ function App() {
   const handleChange = (numberAdded: number, costPer: number, item: number, setItem: Function): void => {
     const amountToTakeFromWealth = numberAdded * costPer;     // Multiply amount to change by cost per, and add to wealth
     
+    console.log("Adding: ", amountToTakeFromWealth)
+
     // if we reduce an expense, we add to the wealth and reduce the expenses' count
     if (numberAdded === -1 && item > 0) {
       setWealth(wealth - amountToTakeFromWealth);
@@ -84,12 +92,21 @@ function App() {
                 <div className="flex-row-center">
                   <button onClick={(e) => handleChange(-1, need['cost'], eval(need['item']), eval(need['setItem']))}>-</button>
                   <p>{eval(need['item'])}</p>
-                  <button onClick={(e) => handleChange(1, 7316, eval(need['item']), eval(need['setItem']))}>+</button>
+                  <button onClick={(e) => handleChange(1, need['cost'], eval(need['item']), eval(need['setItem']))}>+</button>
                 </div>
               </div>
             )
           })
         }
+
+        {/* <div className="expense-item text-center">
+          <p>Rent</p>
+          <div className="flex-row-center">
+            <button onClick={(e) => handleChange(-1, 7316, rent, setRent)}>-</button>
+            <p>{rent}</p>
+            <button onClick={(e) => handleChange(1, 7316, rent, setRent)}>+</button>
+          </div>
+        </div> */}
 
       </section>
 

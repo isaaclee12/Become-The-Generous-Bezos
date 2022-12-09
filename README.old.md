@@ -6,6 +6,28 @@ for 2020, so for the sake of consistency I am using data from that year)
 
 Disclaimer: This is not meant to be a journalistically accurate tool in any way, it's more of a for fun project.
 
+## TODO:
+
+- First, before anything else, Complete all "TODO" tags
+
+- Functionality:
+    - Fix the names on each need-item
+    - Add in the images for each need-item
+    - Add counter
+    - Add reset button
+
+- CSS:
+    - Add spacing between the counter and buttons
+    - Add a background behind just the counters
+    - Stylize the buttons
+    - Stylize the other buttons similarly
+
+- Make sure everything is ADA compliant
+
+- Documentation
+- Deploy on Replit
+- Github README
+
 ### The Wealth:
 Jeff Bezos' approximated wealth was estimated to be $202 billion in 2020
 
