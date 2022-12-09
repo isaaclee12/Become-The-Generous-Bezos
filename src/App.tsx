@@ -4,6 +4,17 @@ import {useState, useEffect} from 'react';
 import bezos from './assets/bezos.png';
 // import bezos from'./assets/bezos_peek.png'; // TODO: Make this item mobile-only!
 
+import {
+  Rent,
+  Food,
+  Transportation,
+  Healthcare,
+  Entertainment,
+  PersonalCare,
+  Education,
+  Aparrel
+} from './assets'
+
 import needsJson from './data/needs.json'
 
 import './App.css';
@@ -26,9 +37,19 @@ function App() {
   const [aparrel, setAparrel] = useState(0);
   
   // TODO: delete this debug
-  useEffect(() => {
-    console.log(needsJson.needs);
-  }, [])
+  // useEffect(() => {
+  //   console.log(needsJson.needs);
+  // }, [])
+
+  const fixName = (name: string): string => {
+    // if name all lowercase, return string w/ first letter uppercase
+    if (name === name.toLowerCase()) {
+      name = name.charAt(0).toUpperCase() + name.substring(1);
+      return name;
+    } 
+    // if name has an uppercase, return string split by words with uppercase 1st letters
+    return name.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); })
+  }
 
   const handleChange = (numberAdded: number, costPer: number, item: number, setItem: Function): void => {
     const amountToTakeFromWealth = numberAdded * costPer;     // Multiply amount to change by cost per, and add to wealth
@@ -88,7 +109,8 @@ function App() {
           needsJson.needs.map(need => {
             return (
               <div className="expense-item text-center">
-                <p>{need['item']}</p>
+                <img src={"./assets/" + need['image']} alt={"Picture for item " + need['item']}/>
+                <p>{fixName(need['item'])}</p>
                 <div className="flex-row-center">
                   <button onClick={(e) => handleChange(-1, need['cost'], eval(need['item']), eval(need['setItem']))}>-</button>
                   <p>{eval(need['item'])}</p>
@@ -98,15 +120,6 @@ function App() {
             )
           })
         }
-
-        {/* <div className="expense-item text-center">
-          <p>Rent</p>
-          <div className="flex-row-center">
-            <button onClick={(e) => handleChange(-1, 7316, rent, setRent)}>-</button>
-            <p>{rent}</p>
-            <button onClick={(e) => handleChange(1, 7316, rent, setRent)}>+</button>
-          </div>
-        </div> */}
 
       </section>
 
