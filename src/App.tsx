@@ -41,12 +41,17 @@ function App() {
   //   console.log(needsJson.needs);
   // }, [])
 
-  const fixName = (name: string): string => {
+  const fixName = (name: string, isImage: boolean): string => {
     // if name all lowercase, return string w/ first letter uppercase
     if (name === name.toLowerCase()) {
       name = name.charAt(0).toUpperCase() + name.substring(1);
       return name;
     } 
+
+    // if dealing with an image name that's more than one word (e.g. Personal Care), return word not split w/ spaces
+    if (isImage) {
+      return name.replace(/([A-Z])/g, '$1').replace(/^./, function(str){ return str.toUpperCase(); })
+    }
     // if name has an uppercase, return string split by words with uppercase 1st letters
     return name.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); })
   }
@@ -104,13 +109,14 @@ function App() {
       1 col on mobile
       This splits the 8 items up nicely */}
       <section className="expense-list">
+        <img src={Rent}/>
 
         {
           needsJson.needs.map(need => {
             return (
               <div className="expense-item text-center">
-                <img src={"./assets/" + need['image']} alt={"Picture for item " + need['item']}/>
-                <p>{fixName(need['item'])}</p>
+                {/* <img src={eval(fixName(need['image'], true))} alt={"Picture for item " + need['item']}/> */}
+                <p>{fixName(need['item'], false)}</p>
                 <div className="flex-row-center">
                   <button onClick={(e) => handleChange(-1, need['cost'], eval(need['item']), eval(need['setItem']))}>-</button>
                   <p>{eval(need['item'])}</p>
