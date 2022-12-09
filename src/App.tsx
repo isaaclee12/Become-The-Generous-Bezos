@@ -4,8 +4,29 @@ import bezos from'./assets/bezos.png';
 import './App.css';
 
 function App() {
-  const [wealth, setWealth] = useState(202000000000) // 202 BILLION USD
-  const [rent, setRent] = useState(0)
+  const [wealth, setWealth] = useState(202000000000); // 202 BILLION USD
+  const [rent, setRent] = useState(0);
+
+  const handleChange = (numberAdded: number, costPer: number, item: number, setItem: Function): void => {
+    // Multiply amount to change by cost per, and add to wealth
+    const amountToTakeFromWealth = numberAdded * costPer;
+
+    console.log(amountToTakeFromWealth);
+    
+    // if we reduce an expense, we add to the wealth and reduce the expenses' count
+    if (numberAdded === -1 && item > 0) {
+      setWealth(wealth - amountToTakeFromWealth);
+      setItem(item - 1);
+      return;
+
+    // if we increase an expense, we subtract from the wealth and increase the expenses' count
+    } else if (numberAdded === 1) {
+      setWealth(wealth - amountToTakeFromWealth);
+      setItem(item + 1);
+    }
+
+    return;
+  }
 
   return (
     <div className="App">
@@ -24,7 +45,7 @@ function App() {
           <img src={bezos} alt="An image of Jeff Bezos' face" className="image"/>
         </div>
         <div className="wealth-counter text-center">
-          <h3>$202,000,000,000</h3>
+          <h3>{wealth}</h3>
         </div>
       </section>
 
@@ -41,9 +62,9 @@ function App() {
           <p>Rent</p>
           <div className="flex-row-center">
             {/* if rent is 0, don't do anything, else decrease */}
-            <button onClick={(e) => (rent === 0) ? "" : setRent(rent - 1)}>-</button>
+            <button onClick={(e) => handleChange(-1, 7316, rent, setRent)}>-</button>
             <p>{rent}</p>
-            <button onClick={(e) => setRent(rent + 1)}>+</button>
+            <button onClick={(e) => handleChange(1, 7316, rent, setRent)}>+</button>
           </div>
         </div>
       </section>
