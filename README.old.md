@@ -1,6 +1,17 @@
 # Become-The-Generous-Bezos
 You have Jeff Bezos' wealth. See how you can help the people.
 
+Based off of 2020 data (Yes, I know the economy has changed dramatically since then. More data is available
+for 2020, so for the sake of consistency I am using data from that year)
+
+Disclaimer: This is not meant to be a journalistically accurate tool in any way, it's more of a for fun project.
+
+### The Wealth:
+Jeff Bezos' approximated wealth was estimated to be $202 billion in 2020
+
+Source: https://www.cnn.com/2020/08/27/tech/jeff-bezos-net-worth-200-billion-intl-hnk/index.html
+
+
 ### The Items:
 
 Other items list based on stuff one pays for:
