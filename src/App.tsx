@@ -1,8 +1,12 @@
 import React from 'react';
+import {useState, useEffect} from 'react';
 import bezos from'./assets/bezos.png';
 import './App.css';
 
 function App() {
+  const [wealth, setWealth] = useState(202000000000) // 202 BILLION USD
+  const [rent, setRent] = useState(0)
+
   return (
     <div className="App">
 
@@ -32,12 +36,14 @@ function App() {
       1 col on mobile
       This splits the 8 items up nicely */}
       <section>
-        <div className="expense-item">
+        <div className="expense-item text-center">
           {/* insert image here */}
+          <p>Rent</p>
           <div className="flex-row-center">
-            <button>-</button>
-            <p>0</p>
-            <button>+</button>
+            {/* if rent is 0, don't do anything, else decrease */}
+            <button onClick={(e) => (rent === 0) ? "" : setRent(rent - 1)}>-</button>
+            <p>{rent}</p>
+            <button onClick={(e) => setRent(rent + 1)}>+</button>
           </div>
         </div>
       </section>
