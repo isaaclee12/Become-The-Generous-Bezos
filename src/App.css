@@ -24,6 +24,10 @@
 
 
 /* Item specific */
+.top-bar {
+  width: 100%;
+}
+
 .title {
   padding: 1em;
   color: rgb(223, 255, 201);
@@ -48,6 +52,11 @@
   border-color: green;
 }
 
+.description {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
 .expense-list {
   margin-top: 5em;
   z-index: 100;
@@ -66,16 +75,13 @@
 }
 
 .number {
-  margin-left: 2em;
-  margin-right: 2em;
-  /* padding-top: 0.5em; */
+  margin-left: 1em;
+  margin-right: 1em;
   font-size: 20px;
-  /* background-color: green; */
+  font-weight: bold;
 }
 
 .counter-button {
-  /* padding-top: 0.1em; */
-  /* padding-bottom: 0.1em; */
   padding-left: 3em;
   padding-right: 3em;
   border-radius: 20px;
@@ -98,6 +104,14 @@
   background-color: #66e124;
 }
 
+.all-button {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-radius: 20px;
+  font-size: 18px;
+  width: 15em;
+}
+
 footer {
   position: bottom;
   bottom: 0;
@@ -105,8 +119,37 @@ footer {
   background-color: lightgray;
   margin-top: 2em;
   margin-bottom: -2em;
-  padding-left: 25%;
-  padding-right: 25%;
+  /* padding-left: 25%;
+  padding-right: 25%; */
   display: flex;
   justify-content: space-between;
+}
+
+.credit {
+  color: gray;
+}
+
+.credit a{
+  color: rgb(19, 89, 151);
+}
+
+.credit a:hover {
+  color: rgb(1, 63, 77);
+  /* font-weight: bold; */
+}
+
+.socials {
+  margin-top: 1em;
+}
+
+.socials a {
+  margin-left: 1em;
+}
+
+.faIcon {
+  color: rgb(67, 67, 67);
+}
+
+.faIcon:hover {
+  color: rgb(26, 25, 25);
 }

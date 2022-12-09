@@ -117,7 +117,7 @@ function App() {
       Stickied items:
       - Jeff Bezos' Face
       - A money meter that will stick to the top (TEST 1st) */}
-      <section className="flex-row-center">
+      <section className="flex-row-center top-bar">
         <div className="sticky stretch">
           <header className="text-center title">
             <strong>Become The Generous Jeff Bezos</strong>  
@@ -134,31 +134,10 @@ function App() {
 
       </section>
 
-      <section>
-          <div className="expense-item text-center">        
-            <button className="counter-button minus-button" onClick={(e) => reset()}>Reset</button>
-
-            <p>People helped: {Math.min(housing, food, transportation, healthcare, entertainment, personalCare, education, aparrel).toLocaleString("en-US")}</p>
-                {/* <img src={require('./assets/' + need['image'])} className="image" alt={"Picture for item " + need['item']}/> */}
-                <p>Add all for one person</p>
-                <div className="flex-row-center counter-container">
-                  <button className="counter-button plus-button" onClick={(e) => addToAll(1)}>Add 1</button>
-                </div>
-                <div className="flex-row-center counter-container">
-                  <button className="counter-button plus-button" onClick={(e) => addToAll(10)}>Add 10</button>
-                </div>
-                <div className="flex-row-center counter-container">
-                  <button className="counter-button plus-button" onClick={(e) => addToAll(100)}>Add 100</button>
-                </div>
-                <div className="flex-row-center counter-container">
-                  <button className="counter-button plus-button" onClick={(e) => addToAll(1000)}>Add 1,000</button>
-                </div>
-                <div className="flex-row-center counter-container">
-                  <button className="counter-button plus-button" onClick={(e) => addToAll(1000000)}>Add 1,000,000</button>
-                </div>
-              </div>
+    <section className="text-center description">
+        <p>In 2020, Jeff Bezos had an estimated wealth of $202,000,000,000. Below are the average annual expenditure amounts for basic needs in the US.</p>
+        <p>See how many people you could help out if you had all of Jeff Bezos' money!</p>
       </section>
-
       {/*A list of items with +/- counters for each Item
       And also in a grid that changes depending on screen size
       4 cols in desktop
@@ -176,7 +155,7 @@ function App() {
                 <p>{"Cost: $" + need['cost'].toLocaleString("en-US") + "/yr."}</p>
                 <div className="flex-row-center counter-container">
                   <button className="counter-button minus-button" onClick={(e) => handleChange(-1, need['cost'], eval(need['item']), eval(need['setItem']))}>-</button>
-                  <p className="number">{eval(need['item']).toLocaleString("en-US")}</p>
+                    <p className="number">{eval(need['item']).toLocaleString("en-US")}</p>
                   <button className="counter-button plus-button" onClick={(e) => handleChange(1, need['cost'], eval(need['item']), eval(need['setItem']))}>+</button>
                 </div>
                 <p>{"Total Spent: $" + (need['cost'] * eval(need['item'])).toLocaleString("en-US")}</p>
@@ -187,19 +166,56 @@ function App() {
 
       </section>
 
+      <section>
+          <div className="expense-item text-center">        
+            <p><strong>People who's needs you've met: {Math.min(housing, food, transportation, healthcare, entertainment, personalCare, education, aparrel).toLocaleString("en-US")}</strong></p>
+                {/* <img src={require('./assets/' + need['image'])} className="image" alt={"Picture for item " + need['item']}/> */}
+                <p>Purchase all annual expenses for:</p>
+                <div className="flex-row-center counter-container">
+                  <button className="counter-button plus-button all-button" onClick={(e) => addToAll(1)}>1 Person</button>
+                </div>
+                <div className="flex-row-center counter-container">
+                  <button className="counter-button plus-button all-button" onClick={(e) => addToAll(10)}>10 People</button>
+                </div>
+                <div className="flex-row-center counter-container">
+                  <button className="counter-button plus-button all-button" onClick={(e) => addToAll(100)}>100 People</button>
+                </div>
+                <div className="flex-row-center counter-container">
+                  <button className="counter-button plus-button all-button" onClick={(e) => addToAll(1000)}>1,000 People</button>
+                </div>
+                <div className="flex-row-center counter-container">
+                  <button className="counter-button plus-button all-button" onClick={(e) => addToAll(1000000)}>1,000,000 People</button>
+                </div>
+                <br/>
+                <br/>
+                <div className="flex-row-center counter-container">
+                  <button className="counter-button minus-button all-button" onClick={(e) => reset()}>Reset</button>
+                </div>
+                <br/>
+              </div>
+      </section>
+
+
       {/* SECTION 3:
       Footer which says:
       "Made by Isaac Lee"
       With LinkedIn, Twitter, and Github links */}
    
       <footer className="footer">
-        <a href="https://twitter.com/isaacwonhalee" target="_blank"><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></a>
-        <a href="https://www.linkedin.com/in/isaac-lee-621873133/" target="_blank"><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></a>
-        <a href="https://isaaclee.org/" target="_blank">Made by Isaac Lee</a>
-        <a href="https://github.com/isaaclee12" target="_blank"><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a>
-        <a href="mailto:isaac.wonha.lee@outlook.com" target="_blank"><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></a>
+        <div className="credit">
+          <p>Created by <a href="https://isaaclee.org/" target="_blank">Isaac Lee</a></p>
+        </div>
+
+        <div className="socials">
+          <a href="https://twitter.com/isaacwonhalee" target="_blank"><FontAwesomeIcon className="faIcon fa-xl" icon={faTwitter}></FontAwesomeIcon></a>
+          <a href="https://www.linkedin.com/in/isaac-lee-621873133/" target="_blank"><FontAwesomeIcon className="faIcon fa-xl" icon={faLinkedin}></FontAwesomeIcon></a>
+          <a href="https://github.com/isaaclee12" target="_blank"><FontAwesomeIcon className="faIcon fa-xl" icon={faGithub}></FontAwesomeIcon></a>
+          <a href="mailto:isaac.wonha.lee@outlook.com" target="_blank"><FontAwesomeIcon className="faIcon fa-xl" icon={faEnvelope}></FontAwesomeIcon></a>
+        </div>
       </footer>
     </div>
+
+    
   );
 }
 
