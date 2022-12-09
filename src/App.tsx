@@ -4,13 +4,25 @@ import {useState, useEffect} from 'react';
 import bezos from './assets/bezos.png';
 // import bezos from'./assets/bezos_peek.png'; // TODO: Make this item mobile-only!
 
-import needs from './data/needs.json'
+import needsJson from './data/needs.json'
 
 import './App.css';
 
 function App() {
   const [wealth, setWealth] = useState(202000000000); // 202 BILLION USD
   const [rent, setRent] = useState(0);
+  const [food, setFood] = useState(0);
+  const [transportation, setTransportation] = useState(0);
+  const [healthcare, setHealthcare] = useState(0);
+  const [entertainment, setEntertainment] = useState(0);
+  const [personalCare, setPersonalCare] = useState(0);
+  const [education, setEducation] = useState(0);
+  const [aparrel, setAparrel] = useState(0);
+  
+  // TODO: delete this debug
+  useEffect(() => {
+    console.log(needsJson.needs);
+  }, [])
 
   const handleChange = (numberAdded: number, costPer: number, item: number, setItem: Function): void => {
     const amountToTakeFromWealth = numberAdded * costPer;     // Multiply amount to change by cost per, and add to wealth
@@ -65,20 +77,19 @@ function App() {
       <section className="expense-list">
 
         {
-          needs.map((need:{cost: number, image:string, item: string, setItem: string}) => {
-            <p>{need.item}</p>
+          needsJson.needs.map(need => {
+            return (
+              <div className="expense-item text-center">
+                <p>{need['item']}</p>
+                <div className="flex-row-center">
+                  <button onClick={(e) => handleChange(-1, need['cost'], eval(need['item']), eval(need['setItem']))}>-</button>
+                  <p>{eval(need['item'])}</p>
+                  <button onClick={(e) => handleChange(1, 7316, eval(need['item']), eval(need['setItem']))}>+</button>
+                </div>
+              </div>
+            )
           })
-          
         }
-
-        {/* <div className="expense-item text-center">
-          <p>Rent</p>
-          <div className="flex-row-center">
-            <button onClick={(e) => handleChange(-1, 7316, rent, setRent)}>-</button>
-            <p>{rent}</p>
-            <button onClick={(e) => handleChange(1, 7316, rent, setRent)}>+</button>
-          </div>
-        </div> */}
 
       </section>
 
