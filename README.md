@@ -8,23 +8,13 @@ Disclaimer: This is not meant to be a journalistically accurate tool in any way,
 
 ## HOURS LOG:
 - 12/8: 3 hours
+- 12/9: 2 hours
 
 ## TODO:
 
-- First, before anything else, Complete all "TODO" tags
-
-- Functionality:
-    - Add in the images for each need-item
-    - Add counter
-    - Add reset button
-
 - UI/CSS:
-    - Add commas to wealth counter
     - Make wealth counter tick quickly by 1's on change
-    - Add spacing between the counter and buttons
-    - Add a background behind just the counters
-    - Stylize the buttons
-    - Stylize the other buttons similarly
+    - Add a grid system that makes the site mobile responsive
 
 - Make sure everything is ADA compliant
 
@@ -44,14 +34,15 @@ Other items list based on stuff one pays for:
 
 SOURCE: https://www.bls.gov/opub/reports/consumer-expenditures/2020/home.htm
 
-- Rent & Utilities: 21,409
-- Food: 7,316
-- Transportation: 9,826	
-- Healthcare: 5,177
-- Entertainment: 2,912
-- Personal Care: 646	
-- Education: 1,271
-- Apparel Costs: 1,434
+- Rent & Utilities: $21,409
+- Food: $7,316
+- Transportation: $9,826	
+- Healthcare: $5,177
+- Entertainment: $2,912
+- Personal Care: $646	
+- Education: $1,271
+- Apparel Costs: $1,434
+- TOTAL: $49,991
 
 <br/>
 Items to buy are based on Maslow'd heirarchy of needs:

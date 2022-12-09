@@ -1,4 +1,4 @@
-export const Rent = require('./rent.png');
+export const Housing = require('./housing.png');
 export const Food = require('./food.png');
 export const Transportation = require('./transportation.png');
 export const Healthcare = require('./healthcare.png');

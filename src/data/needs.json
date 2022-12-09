@@ -2,9 +2,9 @@
     "needs": [
         {
         "cost": 21409,
-        "image": "rent.png",
-        "item": "rent",
-        "setItem": "setRent"
+        "image": "housing.png",
+        "item": "housing",
+        "setItem": "setHousing"
         },
         {
             "cost": 7316,
@@ -32,7 +32,7 @@
         },
         {
             "cost": 646,
-            "image": "personal_care.png",
+            "image": "personalCare.png",
             "item": "personalCare",
             "setItem": "setPersonalCare"
         },
