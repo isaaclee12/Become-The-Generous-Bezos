@@ -1,0 +1,34 @@
+{
+    "Rent & Utilities": {
+        "cost": 21409,
+        "image": "rent.png"
+    },
+    "Food": {
+        "cost": 7316,
+        "image": "food.png"
+    },
+    "Transportation": {
+        "cost": 9826,
+        "image": "transportation.png"
+    },
+    "Healthcare": {
+        "cost": 5177,
+        "image": "healthcare.png"
+    },
+    "Entertainment": {
+        "cost": 2912,,
+        "image": "entertainment.png"
+    },
+    "Personal Care": {
+        "cost": 646,
+        "image": "personal_care.png"
+    },
+    "Education": {
+        "cost": 1271,
+        "image": "education.png"
+    },
+    "Apparel & Services": {
+        "cost": 1434,
+        "image": "aparrel.png"
+    },
+}
