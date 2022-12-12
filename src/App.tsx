@@ -27,6 +27,7 @@ import './App.css';
 function App() {
 
   const [wealth, setWealth] = useState(202000000000); // 202 BILLION USD
+  const [displayWealth, setDisplayWealth] = useState(202000000000);
   const [housing, setHousing] = useState(0);
   const [food, setFood] = useState(0);
   const [transportation, setTransportation] = useState(0);
@@ -38,6 +39,7 @@ function App() {
 
   const reset = (): void => {
     setWealth(202000000000);
+    setDisplayWealth(202000000000);
     setHousing(0);
     setFood(0);
     setTransportation(0);
@@ -86,11 +88,41 @@ function App() {
     return name.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); })
   }
 
+  const doInterval = (amountToTakeFromWealth: number): any => {
+
+    /*
+    let counts=setInterval(function to call);
+        let upto = 0; index to count by, for us = amount
+        function function to call(){
+            var count= document.getElementById("counter");
+            count.innerHTML=++upto; iterate upto while also updating the value in HTML (Downto for decreasing)
+            if(upto===1000) when we hit 1000 (or in our case, amount)
+            {
+                clearInterval(counts); kill the interval
+            }
+        }
+      */
+    
+    let i = 0;
+    if (i <= amountToTakeFromWealth) { // while we haven't reached the target amount
+      
+      // count timer
+      const timer = setTimeout( // every millisecond, subtract 1 from wealth
+        () => {
+          setWealth(wealth - 1);
+        }, 1
+      )
+      
+      i++; // iterate til we hit target amount to take
+      return () => clearTimeout(timer); // clear timer
+    }
+  }
+
   const handleChange = (numberAdded: number, costPer: number, item: number, setItem: Function): void => {
     const amountToTakeFromWealth = numberAdded * costPer;     // Multiply amount to change by cost per, and add to wealth
     
-    const tempWealth = wealth - amountToTakeFromWealth;
-    if (tempWealth >= 0) {
+    const resultWealth = wealth - amountToTakeFromWealth;
+    if (resultWealth >= 0) {
       // if we reduce an expense, we add to the wealth and reduce the expenses' count
       if (numberAdded === -1 && item > 0) {
         setWealth(wealth - amountToTakeFromWealth);
@@ -124,7 +156,8 @@ function App() {
           </header>
           
           <div className="wealth-counter text-center">
-            <h3 className="">{"$" + wealth.toLocaleString("en-US")}</h3>
+            <h3 className="">{"$" + displayWealth.toLocaleString("en-US")}</h3>
+            <h3 className="">{"$" + wealth.toLocaleString("en-US")}</h3> {/* <- debug */}
           </div>
         </div>
 
