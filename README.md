@@ -9,23 +9,10 @@
 </p>
 
 ### Description
-In 2020, Jeff Bezos had an estimated $202 billion in wealth. 
+Jeff Bezos' approximated wealth was estimated to be $202 billion in 2020 [<a src="https://www.cnn.com/2020/08/27/tech/jeff-bezos-net-worth-200-billion-intl-hnk/index.html">source</a>]
 
 
-(Yes, I know the economy has changed dramatically since then. More data was available for 2020, so for the sake of consistency the data is only from that year)
-
-
-### The Wealth:
-Jeff Bezos' approximated wealth was estimated to be $202 billion in 2020
-
-Source: https://www.cnn.com/2020/08/27/tech/jeff-bezos-net-worth-200-billion-intl-hnk/index.html
-
-
-### The Items:
-
-Other items list based on stuff one pays for:
-
-SOURCE: https://www.bls.gov/opub/reports/consumer-expenditures/2020/home.htm
+In 2020, the average American spent the following on each item: 
 
 - Rent & Utilities: $21,409
 - Food: $7,316
@@ -37,8 +24,13 @@ SOURCE: https://www.bls.gov/opub/reports/consumer-expenditures/2020/home.htm
 - Apparel Costs: $1,434
 - TOTAL: $49,991
 
+[<a src="https://www.bls.gov/opub/reports/consumer-expenditures/2020/home.htm">source</a>]
+
+See how many people's expenses you could pay for if you had Jeff Bezos' money! 
 ### Disclaimer 
 This is not meant to be a journalistically accurate tool in any way shape or form.
+Data is from 2020 as there if more data was available from that year.
+
 
 ### Find me on 
 <a href="mailto:isaac.wonha.lee@outlook.com" target="_blank"><img src="https://img.shields.io/badge/Email-isaac.wonha.lee@outlook.com-blue?style=for-the-badge&logo=gmail"></a>

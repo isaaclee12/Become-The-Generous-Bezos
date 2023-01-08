@@ -5,17 +5,6 @@ import CountUp from 'react-countup';
 import bezos from './assets/bezos.png';
 // import bezos from'./assets/bezos_peek.png'; // TODO: Make this item mobile-only!
 
-import { // Note: didn't end up needing these, but good practice for pics that don't need to be iterated over
-  Housing,
-  Food,
-  Transportation,
-  Healthcare,
-  Entertainment,
-  PersonalCare,
-  Education,
-  Aparrel
-} from './assets'
-
 import needsJson from './data/needs.json'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
