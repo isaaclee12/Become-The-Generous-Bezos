@@ -4,6 +4,8 @@
 
 <h4 align="center"> Production Build: <a href="https://become-the-generous-bezos.isaaclee121.repl.co/">https://become-the-generous-bezos.isaaclee121.repl.co/</a> </h4>
 
+<img align="center" style="max-width:50%;" src="demo.jpg" alt="A screenshot of the website"/>
+
 <p align="center">
 <br>
 </p>
