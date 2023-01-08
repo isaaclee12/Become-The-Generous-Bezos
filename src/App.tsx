@@ -19,7 +19,6 @@ import { // Note: didn't end up needing these, but good practice for pics that d
 import needsJson from './data/needs.json'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 

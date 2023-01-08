@@ -1,26 +1,19 @@
-# Become-The-Generous-Bezos
-You have Jeff Bezos' wealth. See how you can help the people.
+<h2 align="center"><u>Become-The-Generous-Bezos</u></h2>
 
-Based off of 2020 data (Yes, I know the economy has changed dramatically since then. More data is available
-for 2020, so for the sake of consistency I am using data from that year)
+<h4 align="center"> You have Jeff Bezos' wealth. See how you can help the people. </h4>
 
-Disclaimer: This is not meant to be a journalistically accurate tool in any way, it's more of a for fun project.
+<h4 align="center"> Production Build: <a href="https://become-the-generous-bezos.isaaclee121.repl.co/">https://become-the-generous-bezos.isaaclee121.repl.co/</a> </h4>
 
-## HOURS LOG:
-- 12/8: 3 hours
-- 12/9: 2 hours
+<p align="center">
+<br>
+</p>
 
-## TODO:
+### Description
+In 2020, Jeff Bezos had an estimated $202 billion in wealth. 
 
-- UI/CSS:
-    - Make wealth counter tick quickly by 1's on change
-    - Add a grid system that makes the site mobile responsive
 
-- Make sure everything is ADA compliant
+(Yes, I know the economy has changed dramatically since then. More data was available for 2020, so for the sake of consistency the data is only from that year)
 
-- Documentation
-- Deploy on Replit
-- Github README
 
 ### The Wealth:
 Jeff Bezos' approximated wealth was estimated to be $202 billion in 2020
@@ -44,72 +37,10 @@ SOURCE: https://www.bls.gov/opub/reports/consumer-expenditures/2020/home.htm
 - Apparel Costs: $1,434
 - TOTAL: $49,991
 
-<br/>
-Items to buy are based on Maslow'd heirarchy of needs:
-<br/>
+### Disclaimer 
+This is not meant to be a journalistically accurate tool in any way shape or form.
 
-###### Physiological needs:
-- Air
-- Heat
-- Clothes
-- Hygiene
-- Light
-- Water
-- Urination
-- Food
-- Excretion
-- Shelter
-- Sleep
-
-##### Safety needs:
-- Health
-- Personal security
-- Emotional security
-- Financial security
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Find me on 
+<a href="mailto:isaac.wonha.lee@outlook.com" target="_blank"><img src="https://img.shields.io/badge/Email-isaac.wonha.lee@outlook.com-blue?style=for-the-badge&logo=gmail"></a>
+<a href="https://www.linkedin.com/in/isaac-lee-621873133/">LinkedIn</a>
+<a href="https://isaaclee.org/">Portfoilo Website</a>
